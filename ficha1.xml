@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<fatura>
+    <produtos></produtos>
+    <numero></numeros>
+</fatura>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+<preco>29.99</preco>
+<lojalivros>   raiz da árvore
+  <livro>   elemento intermédio da árvore
+<titulo>Harry Potter</titulo>  elemento terminal da árvore com os dados
+<autor>J K. Rowling</autor>
+     <ano>2005</ano>
+     <preco>29.99</preco>
+   </livro>
+</lojalivros >
+<documento id="001">
+  <tipo>notas</tipo>
+  <texto>O XML é muito engraçado!!!</texto>
+</documento>-->
