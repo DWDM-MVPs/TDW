@@ -1,24 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <p:noticias xmlns:p="http://www.ipv.pt/noticias">
-
-<np:noticia xmlns:np="http://www.ipv.pt/noticiasprincipais">
+  <np:noticia xmlns:np="http://www.ipv.pt/noticiasprincipais">
 	<np:titulo></np:titulo>
 	<np:data></np:data>
 	<np:classificacao></np:classificacao>
 	<np:sumario></np:sumario>
 	<np:imagem></np:imagem>
 	<np:link></np:link>
-</np:noticia>
-
-<nml:noticia xmlns:nml="http://www.ipv.pt/noticiasmaislidas">>
+  </np:noticia>
+  <nml:noticia xmlns:nml="http://www.ipv.pt/noticiasmaislidas">
 	<nml:titulo></nml:titulo>
 	<nml:data></nml:data>
 	<nml:classificacao></nml:classificacao>
 	<nml:imagem></nml:imagem>
 	<nml:link></nml:link>
-</nml:noticia>	
-
+  </nml:noticia>
 </p:noticias>
-
-
