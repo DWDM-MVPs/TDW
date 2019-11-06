@@ -3,18 +3,18 @@
 <p:noticias xmlns:p="http://www.ipv.pt/noticias">
 
 <np:noticia xmlns:np="http://www.ipv.pt/noticiasprincipais">
-	<np:titulo>Cálendário escolar: Fique a conhecer todas as datas</np:titulo>
-	<np:data>13 de Setembro de 2018</np:data>
-	<np:classificacao>Educação</np:classificacao>
-	<np:sumario>O novo ano lectivo está prestes a começar. Anote todas as datas importantes do calendário escolar</np:sumario>
+	<np:titulo></np:titulo>
+	<np:data></np:data>
+	<np:classificacao></np:classificacao>
+	<np:sumario></np:sumario>
 	<np:imagem></np:imagem>
 	<np:link></np:link>
 </np:noticia>
 
 <nml:noticia xmlns:nml="http://www.ipv.pt/noticiasmaislidas">>
-	<nml:titulo>Cálendário escolar:</nml:titulo>
-	<nml:data>13 de Setembro de 2018</nml:data>
-	<nml:classificacao>Educação</nml:classificacao>
+	<nml:titulo></nml:titulo>
+	<nml:data></nml:data>
+	<nml:classificacao></nml:classificacao>
 	<nml:imagem></nml:imagem>
 	<nml:link></nml:link>
 </nml:noticia>	
