@@ -1,17 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<fatura id="asd">
-	<data>12/02/2019</data>
-	<quantidade>2</quantidade>
-	<preco>2.0</preco>
-	<codigo>38JNs92naS2</codigo>
-	<desginacao>Nada</desginacao>
-	<cabecalho></cabecalho>
-	<produtos>
-		<produto>dsf</produto>
-		<produto>gdsds</produto>
+<fatura id="1">
+		<cabecalho>
+			<data></data>
+			<cliente>		
+				<nome></nome>
+				<morada></morada>
+				<telefone></telefone>
+			</cliente>
+		</cabecalho>
+		<produtos>
+			<produto>
+				<quantidade></quantidade>
+				<preco></preco>
+				<codigo></codigo>
+				<designacao></designacao>
+			</produto>
+			<produto>
+				<quantidade></quantidade>
+				<preco></preco>
+				<codigo></codigo>
+				<designacao></designacao>
+			</produto>
 	</produtos>
-	<nome>Nome</nome>
-	<cliente>Cliente</cliente>
-	<morada>lugar</morada>
-	<telefone>910928192</telefone>
 </fatura>
