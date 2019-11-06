@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<p:http://www.ipv.pt/pagina>
+
+   <p:noticia></p:noticia>
+
+</p:http://www.ipv.pt/pagina>
+
+<np:http://www.ipv.pt/noticiasprincipais>
+
+   <np:noticia></np:noticia>
+   <np:titulo></np:titulo>
+   <np:data></np:data>
+   <np:classificacao></np:classificacao>
+   <np:sumario></np:sumario>
+   <np:imagem></np:imagem>
+   <np:link></np:link>
+
+</np:http://www.ipv.pt/noticiasprincipais>
+
+<nml:http://www.ipv.pt/noticiasmaislidas>
+
+   <nml:noticia></nml:noticia>
+   <nml:titulo></nml:titulo>
+   <nml:data></nml:data>
+   <nml:classificacao></nml:classificacao>
+   <nml:link></nml:link>
+   
+</nml:http://www.ipv.pt/noticiasmaislidas>
