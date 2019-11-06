@@ -1,0 +1,27 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Product">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element type="xs:string" name="ProductName"/>
+        <xs:element type="xs:string" name="ProductType"/>
+        <xs:element type="xs:byte" name="Price"/>
+        <xs:element type="xs:string" name="Class"/>
+        <xs:element type="xs:string" name="Company"/>
+        <xs:element name="Provider">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="Name"/>
+              <xs:element type="xs:string" name="City"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute type="xs:byte" name="ProductID"/>
+      <xs:attribute type="xs:string" name="Category"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
+
+
+
+
