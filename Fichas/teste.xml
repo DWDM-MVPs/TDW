@@ -1,56 +1,69 @@
-<?xml version="1.0" encoding="utf-8"?>
-<a:agenda xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-		xsi:schemaLocation="http://www.ipv.pt/tdm/2018/agenda Agenda.xsd"
-		xmlns:a="http://www.ipv.pt/tdm/2018/agenda">
-	<a:entrada id="e1" tipo="pessoa">
-		<a:nome>Carlos Cunha</a:nome>
-		<a:email>cacunha@di.estv.ipv.pt</a:email>
-		<a:telefone>253-604479</a:telefone>
-	</a:entrada>
-	<a:grupo gid="ep1">
-		<a:entrada id="e2" tipo="pessoa">
-			<a:nome>Pedro Henriques</a:nome>
-			<a:email>prh@di.ucoimbra.pt</a:email>
-			<a:telefone>253-604469</a:telefone>
-		</a:entrada>
-		<a:entrada id="e3" tipo="pessoa">
-			<a:nome>Jo�o Saraiva</a:nome>
-			<a:email>jas@di.ua.pt</a:email>
-			<a:telefone>253-604479</a:telefone>
-		</a:entrada>
-		<a:ref entref="e1"/>
-	</a:grupo>
-	<a:entrada id="e4" tipo="empresa">
-		<a:nome>Lavandaria Tudo Branco</a:nome>
-		<a:telefone>253-604433</a:telefone>
-	</a:entrada>
-	<a:entrada id="e5" tipo="pessoa">
-		<a:nome>Jos� Alves de Castro</a:nome>
-		<a:telefone>253-777888</a:telefone>
-	</a:entrada>
-	<a:entrada id="e6" tipo="pessoa">
-		<a:nome>David Jos� Lopes Ramalho</a:nome>
-		<a:telefone>253-610666</a:telefone>
-	</a:entrada>
-	<a:grupo gid="familia">
-		<a:entrada id="e7">
-			<a:nome>Carmen Lopes</a:nome>
-			<a:telefone>253-600700</a:telefone>
-		</a:entrada>
-		<a:ref entref="e1"/>
-		<a:ref entref="e6"/>
-		<a:entrada id="e8">
-			<a:nome>Leonardo Lopes Ramalho</a:nome>
-			<a:telefone>253-999988</a:telefone>
-		</a:entrada>
-	</a:grupo>
-	<a:entrada id="e11">
-		<a:nome>CAJO</a:nome>
-		<a:email>cajo@ua.pt</a:email>
-		<a:telefone>234-456789</a:telefone>		
-	</a:entrada>
-	<a:entrada id="e121" tipo="pessoa">
-		<a:nome>Tiago</a:nome>
-		<a:telefone>9192136222</a:telefone>
-	</a:entrada>
-</a:agenda>
+<?xml version="1.0" encoding="UTF-8"?>
+<estgv>
+  <anoLetivo ano="20182019">
+	<curso id="TDM">
+	  <anoCurricular id="1">
+		<disciplina>
+		  <nome>Aplicações Internet 1</nome>
+		  <ects>8</ects>
+		  <docentes>
+			<teorica NM="1">Carlos Cunha</teorica>
+			<pratica />
+		  </docentes>
+		</disciplina>
+	  </anoCurricular>
+	  <anoCurricular id="2">
+		<disciplina>
+		  <nome>Aplicações Internet 2</nome>
+		  <ects>4</ects>
+		  <docentes>
+			<teorica NM="1">Carlos Cunha</teorica>
+			<pratica NM="2">Filipe Sá</pratica>
+		  </docentes>
+		</disciplina>
+	  </anoCurricular>
+	  <anoCurricular id="3">
+		<disciplina>
+		  <nome>Aplicações Internet 3</nome>
+		  <ects>6</ects>
+		  <docentes>
+			<teorica NM="1">Carlos Cunha</teorica>
+			<pratica NM="2">Filipe Sá</pratica>
+		  </docentes>
+		</disciplina>
+	  </anoCurricular>
+	</curso>
+	<curso id="EI">
+	  <anoCurricular id="1">
+		<disciplina>
+		  <nome>Redes 1</nome>
+		  <ects>8</ects>
+		  <docentes>
+			<teorica NM="3">Pedro Martins</teorica>
+			<pratica NM="2">Filipe Sá</pratica>
+		  </docentes>
+		</disciplina>
+	  </anoCurricular>
+	  <anoCurricular id="2">
+		<disciplina>
+		  <nome>Redes 2</nome>
+		  <ects>3</ects>
+		  <docentes>
+			<teorica NM="1">Filipe Caldeira</teorica>
+			<pratica NM="4">Pedro Martins</pratica>
+		  </docentes>
+		</disciplina>
+	  </anoCurricular>
+	  <anoCurricular id="3">
+		<disciplina>
+		  <nome>Aplicações Internet 3</nome>
+		  <ects>8</ects>
+		  <docentes>
+			<teorica NM="3">Filipe Sá</teorica>
+			<pratica />
+		  </docentes>
+		</disciplina>
+	  </anoCurricular>
+	</curso>
+  </anoLetivo>
+</estgv>
