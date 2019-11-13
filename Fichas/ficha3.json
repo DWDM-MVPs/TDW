@@ -1,0 +1,91 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+      "nomeDisciplina": {
+        "type": "string",
+        "pattern": "Aplicacoes.[a-zA-Z0-9_]+"
+      },
+      "codigoDisciplina": {
+        "type": "string",
+        "enum": ["12A", "13A", "14A", "34A", "40A"]
+      },
+      "detalhesDisciplina": {
+        "type": "object",
+        "properties": {
+          "docenteteoricas": {
+            "type": "string"
+          },
+          "numerototalAlunos": {
+            "type": "integer",
+            "minimum": 15,
+            "maximum": 25
+          },
+          "praticas": {
+            "type": "object",
+            "properties": {
+              "TP1": {
+                "type": "object",
+                "properties": {
+                  "numeroInscritosTp1": {
+                    "type": "integer"
+                  },
+                  "docenteTp1": {
+                    "type": "string",
+                    "pattern": "[A-Z][a-z].* [A-Z][a-z].*",
+                    "maxLength":10
+                  }
+                },
+                "required": [
+                  "numeroInscritosTp1",
+                  "docenteTp1"
+                ]
+              },
+              "TP2": {
+                "type": "object",
+                "properties": {
+                  "numeroInscritosTp2": {
+                    "type": "integer"
+                  },
+                  "docenteTp2": {
+                    "type": "string",
+                    "pattern": "[A-Z][a-z].*[A-Z][a-z].*",
+                    "minLength":10
+                  }
+                },
+                "required": [
+                  "numeroInscritosTp2",
+                  "docenteTp2"
+                ]
+              }
+            },
+            "required": [
+              "TP1",
+              "TP2"
+            ]
+          }
+        },
+        "required": [
+          "docenteteoricas",
+          "numerototalAlunos",
+          "praticas"
+        ]
+      },
+      "numeroAluno": {
+        "type": "integer",
+        "maximum": 45000,
+        "minimum": 15000
+      },
+      "data": {
+        "type": "string",
+        "enum": ["08-10-2018","09-10-2018","18-11-2018"]
+      }
+    },
+    "required": [
+      "nomeDisciplina",
+      "codigoDisciplina",
+      "detalhesDisciplina",
+      "numeroAluno",
+      "data"
+    ]
+  }
