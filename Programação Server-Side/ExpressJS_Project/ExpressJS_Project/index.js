@@ -41,15 +41,25 @@ app.get("/:id", (req, res) => {
 });
 
 app.post("/", (req, res) => {
-	console.log("POST: " + req.body.nota);
-	minhas_notas.push(parseInt(req.body.nota));
-	res.status(200).send("Registo adicionado.");
+	if (req.body.nota != null) {
+		console.log("POST: " + req.body.nota);
+		minhas_notas.push(parseInt(req.body.nota));
+		res.status(200).send("Registo adicionado.");
+	}
+	else {
+		res.status(400).send("Erro");
+	}
 });
 
 app.patch("/:id", (req, res) => {
-	console.log("PATCH:" + req.params.id + " | " + req.body.nota);
-	minhas_notas[req.params.id] = parseInt(req.body.nota);
-	res.status(200).send("Registo atualizado.");
+	if (req.params.id != null && req.body.nota != null) {
+		console.log("PATCH:" + req.params.id + " | " + req.body.nota);
+		minhas_notas[req.params.id] = parseInt(req.body.nota);
+		res.status(200).send("Registo atualizado.");
+	}
+	else {
+		res.status(400).send("Erro");
+	}
 });
 
 app.delete('/:id', (req, res) => {
