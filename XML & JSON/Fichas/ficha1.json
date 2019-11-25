@@ -1,0 +1,114 @@
+{
+    "estgv": {
+       "anoLetivo": {
+          "curso": [
+             {
+                "anoCurricular": [
+                   {
+                      "disciplina": {
+                         "nome": "Aplicações Internet 1",
+                         "ects": "8",
+                         "docentes": {
+                            "teorica": {
+                               "NM": "1",
+                               "nome": "Carlos Cunha"
+                            }
+                         }
+                      },
+                      "id": "1"
+                   },
+                   {
+                      "disciplina": {
+                         "nome": "Aplicações Internet 2",
+                         "ects": "4",
+                         "docentes": {
+                            "teorica": {
+                               "NM": "1",
+                               "nome": "Carlos Cunha"
+                            },
+                            "pratica": {
+                               "NM": "2", 
+                               "nome": "Filipe Sá"
+                            }
+                         }
+                      },
+                      "id" : "2"
+
+                   },
+                   {
+                      "disciplina": {
+                         "nome": "Aplicações Internet 3",
+                         "ects": "6",
+                         "docentes": {
+                            "teorica": {
+                               "NM": "1",
+                               "nome": "Carlos Cunha"
+                            },
+                            "pratica": {
+                               "NM": "2",
+                               "nome": "Filipe Sá"
+                            }
+                         }
+                      },
+                      "id": "3"
+                   }
+                ],
+                "id": "TDM"
+             },
+             {
+                "anoCurricular": [
+                   {
+                      "disciplina": {
+                         "nome": "Redes 1",
+                         "ects": "8",
+                         "docentes": {
+                            "teorica": {
+                               "NM": "3",
+                               "nome": "Pedro Martins"
+                            },
+                            "pratica": {
+                               "NM": "2",
+                               "nome": "Filipe Sá"
+                            }
+                         }
+                      },
+                      "id": "1"
+                   },
+                   {
+                      "disciplina": {
+                         "nome": "Redes 2",
+                         "ects": "3",
+                         "docentes": {
+                            "teorica": {
+                               "NM": "1",
+                               "nome": "Filipe Caldeira"
+                            },
+                            "pratica": {
+                               "NM": "4",
+                               "nome": "Pedro Martins"
+                            }
+                         }
+                      },
+                      "id": "2"
+                   },
+                   {
+                      "disciplina": {
+                         "nome": "Aplicações Internet 3",
+                         "ects": "8",
+                         "docentes": {
+                            "teorica": {
+                               "NM": "3",
+                               "nome": "Filipe Sá"
+                            }
+                         }
+                      },
+                      "id": "3"
+                   }
+                ],
+                "id": "EI"
+             }
+          ],
+          "ano": "20182019"
+       }
+    }
+ }
