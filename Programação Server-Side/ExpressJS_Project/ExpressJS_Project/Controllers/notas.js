@@ -1,48 +1,77 @@
-﻿app.get("/", (res) => {
-	res.send(minhas_notas);
+﻿var express = require('express');
+var router = express.Router()
+const Notas = require("../Models/notas");
+import notasSchema from "../Models/notas");
+
+
+
+router.get('/', (req) => {
+	Notas.find({})
+		.then(result => {
+			if (result != null) {
+				return res.status(200).send(result);
+			}
+			else {
+				return res.status(400).send("Not Found");
+			}
+		});
 });
 
-app.get("/:id", (req, res) => {
-	console.log("GET: " + req.params.id);
-	var valor = minhas_notas[req.params.id];
-	if (valor != null) {
-		res.send(String(minhas_notas[req.params.id]));
+
+
+router.get('/:id', (req, res) => {
+	if (true)
+	{
+		res.status(200).send();
 	}
-	else {
-		res.status(404).send("Registo não encontrado.");
+	else
+	{
+		res.status(200).send();
 	}
 });
 
-module.exports = function (app, minhas_notas) {
-	app.post("/", (req, res) => {
-		if (req.body.nota != null) {
-			console.log("POST: " + req.body.nota);
-			minhas_notas.push(parseInt(req.body.nota));
-			res.status(200).send("Registo adicionado.");
-		}
-		else {
-			res.status(400).send("Erro");
-		}
-	});
 
-	app.patch("/:id", (req, res) => {
-		if (req.params.id != null && req.body.nota != null) {
-			console.log("PATCH:" + req.params.id + " | " + req.body.nota);
-			minhas_notas[req.params.id] = parseInt(req.body.nota);
-			res.status(200).send("Registo atualizado.");
-		}
-		else {
-			res.status(400).send("Erro");
-		}
-	});
 
-	app.delete('/:id', (req, res) => {
-		if (req.params.id != null) {
-			minhas_notas.splice(req.params.id);
-		}
-		else {
-			minhas_notas = null;
-			res.status(200)
-		}
-	});
-}
+router.post('/', (req, res) => {
+	if (req.body.nota != null) {
+		Notas.create(req.body)
+			.then((nota) => {
+				return res.status(200).send(nota);
+			})
+			.catch((error) => {
+				return res.status(400).send(error.message);
+			});
+	}
+	return res.status(400);
+});
+
+
+
+router.patch('/:id', (req, res) => {
+	if (req.body != null && req.params != null) {
+		Notas.updateOne({
+			codigo: req.params.id
+		}, req.body)
+			.then((nota) => {
+				return res.status(200).send(editNota);
+			})
+			.catch((error) => {
+				return res.status(400).send(error.message);
+			});
+	}
+});
+
+
+
+router.delete('/', (req, res) => {
+	res.status(200).send()
+})
+
+
+
+router.delete('/:id', (req, res) => {
+	res.status(200).send()
+})
+
+
+module.exports = router;

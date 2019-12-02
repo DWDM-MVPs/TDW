@@ -1,27 +1,31 @@
-// JavaScript source code
-// app.get("/", (req, res) => { res.send("<mensagem>") });
-// req.params
-
-
-// # Load >
 const express = require("express");
 const app = express();
 const port = 4000;
-var morgan = require("morgan");
-
-app.use(morgan("dev"));
-app.use(express.static(__dirname + "/public"));
-app.use(express.json());
-
-app.listen(port, () => console.log("Aplicação de TDW - Miguel Campos"));
-// # < Load
 
 
 
 
+// #
+const MongoClient = require("mongodb").MongoClient;
+const mongoose = require("mongoose");
 
-// # > Exercício
-let minhas_notas = [20, 10, 15, 17];
+const dbName = "dexpressjs";
+const url = "mongodb://localhost:27017";
+const connect = mongoose.connect(url, { dbName: dbName });
 
-require("./Controllers/notas")(app, minhas_notas);
-// # < Exercício
+let date_ob = new Date();
+let date = ("0" + date_ob.getDate()).slice(-2);
+let hours = date_ob.getHours();
+
+connect.then((db) => {
+	console.log("Connected correctly to server");
+
+	var notas = require("./Controllers/notas");
+	app.use("/notas", notas);
+	app.use(function (next) {
+		console.log("New request: Dia " + date + " as " + hours + " horas.");
+		next();
+	})
+	app.listen(port, () => console.log("As minhas notas - Miguel Campos"));
+})
+// #
