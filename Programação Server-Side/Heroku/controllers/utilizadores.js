@@ -1,5 +1,8 @@
-var MongoClient = require('mongodb').MongoClient;
-var uri = "mongodb://admin:deloitte@dwdm-tdw-shard-00-00-axldi.azure.mongodb.net:27017,dwdm-tdw-shard-00-01-axldi.azure.mongodb.net:27017,dwdm-tdw-shard-00-02-axldi.azure.mongodb.net:27017/test?ssl=true&replicaSet=DWDM-TDW-shard-0&authSource=admin&retryWrites=true&w=majority";
+module.exports = async function (app, minhas_notas)
+{
+
+	var MongoClient = require('mongodb').MongoClient;
+	var uri = "mongodb://admin:deloitte@dwdm-tdw-shard-00-00-axldi.azure.mongodb.net:27017,dwdm-tdw-shard-00-01-axldi.azure.mongodb.net:27017,dwdm-tdw-shard-00-02-axldi.azure.mongodb.net:27017/test?ssl=true&replicaSet=DWDM-TDW-shard-0&authSource=admin&retryWrites=true&w=majority";
 
 // BD: mdb
 // CL: mdbc
@@ -16,8 +19,8 @@ var uri = "mongodb://admin:deloitte@dwdm-tdw-shard-00-00-axldi.azure.mongodb.net
 	MongoClient.connect(url, function(err, db) {
 		if (err) throw err;
 
-		var query = {nome: "Utilizadores"};
-		const collection = client.db("mdb").collection("mdbc").find(query).toArray(function(err, result){
+		var sql = {nome: "Utilizadores"};
+		const collection = client.db("mdb").collection("mdbc").find(sql).toArray(function(err, result){
 			if (err) throw err;
 			console.log(result);
 		});
@@ -27,6 +30,7 @@ var uri = "mongodb://admin:deloitte@dwdm-tdw-shard-00-00-axldi.azure.mongodb.net
 	// Insert
 	MongoClient.connect(url, function(err, db) {
 		if (err) throw err;
+
 		var dbo = db.db("ExpressJS");
 		var obj = { nome: "Ze", numeroAluno:"69", cidadeNatal:"Viseu", email:"xd@gmail.com", anoNascimento:"1900"};
 		dbo.collection("Utilizadores").insertOne(obj, function(err, res) {
@@ -60,3 +64,4 @@ var uri = "mongodb://admin:deloitte@dwdm-tdw-shard-00-00-axldi.azure.mongodb.net
 			db.close();
 		});
 	});
+}

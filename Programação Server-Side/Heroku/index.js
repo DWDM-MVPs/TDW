@@ -3,6 +3,7 @@ const app = express();
 const port = 4000;
 
 require("./controllers/notas")(app);
+require("./controllers/utilizadores")(app);
 
 app.use(express.json());
 
