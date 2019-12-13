@@ -90,7 +90,7 @@ exports.update = function (req, res) {
 
 // DELETE NOTA
 exports.delete = function (req, res) {
-	NotasSchema.remove({_id: req.params.id_nota}, function (err, nota) {
+	NotasSchema.deleteOne({_id: req.params.id_nota}, function (err, nota) {
 		if (err) {
 			res.send(err);
 		}

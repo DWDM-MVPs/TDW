@@ -2,9 +2,11 @@ var mongoose = require('mongoose');
 
 // SETUP
 var utilizadoresSchema = mongoose.Schema({
-    numeroAluno: {
+    _id: {
         type: Number,
         required: true,
+        unique: true,
+        alias: 'numeroAluno',
     },
     nome: {
         type: String,

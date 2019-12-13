@@ -2,6 +2,12 @@ var mongoose = require('mongoose');
 
 // SETUP
 var notasSchema = mongoose.Schema({
+    _id: {
+        type: Number,
+        required: true,
+        unique: true,
+        alias: 'codigo',
+    },
     professor: {
         type: String,
         required: true,
@@ -16,6 +22,8 @@ var notasSchema = mongoose.Schema({
         min: 0,
         max: 20,
     },
+}, {
+    _id: false,
 });
 
 // EXPORT

@@ -94,7 +94,7 @@ exports.update = function (req, res) {
 
 // DELETE UTILIZADOR
 exports.delete = function (req, res) {
-	UtilizadoresSchema.remove({_id: req.params.id_utilizador}, function (err, utilizador) {
+	UtilizadoresSchema.deleteOne({_id: req.params.id_utilizador}, function (err, utilizador) {
 		if (err) {
 			res.send(err);
 		}
