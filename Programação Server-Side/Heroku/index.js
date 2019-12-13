@@ -50,4 +50,4 @@ else
 
 // ROUTES
 var routes = require("./routes")
-app.use('/api', routes)
+app.use('/', routes)
