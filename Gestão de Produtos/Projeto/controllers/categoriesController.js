@@ -1,5 +1,6 @@
 // IMPORT SCHEMA
 CategoriesSchema = require('../models/categoriesModel');
+ProductsSchema = require('../models/productsModel');
 
 
 
@@ -59,7 +60,7 @@ exports.new = function (req, res) {
 		if (err) {
 			res.json(err);
 		}
-		
+
 		res.status(200).send("Category successfully added.");
 	});
 };
@@ -73,7 +74,7 @@ exports.update = function (req, res) {
 		if (err) {
 			res.send(err);
 		}
-		
+
 		category.name = req.body.name;
 		category.parentCategory = req.body.parentCategory;
 		category.isActive = req.body.isActive;
@@ -91,11 +92,18 @@ exports.update = function (req, res) {
 
 // DELETE CATEGORY
 exports.delete = function (req, res) {
-	CategoriesSchema.deleteOne({ _id: req.params.id_category }, function (err, category) {
-		if (err) {
-			res.send(err);
-		}
+	if (!ProductsSchema.find({
+		"category": CategoriesSchema.find({ _id: req.params.id_category }).name
+	})) {
+		CategoriesSchema.deleteOne({ _id: req.params.id_category }, function (err, category) {
+			if (err) {
+				res.send(err);
+			}
 
-		res.status(200).send("Category successfully deleted.");
-	});
+			res.status(200).send("Category successfully deleted.");
+		});
+	}
+	else {
+		res.status(200).send("Could not delete the category because there are products that depend on it.");
+	}
 };
