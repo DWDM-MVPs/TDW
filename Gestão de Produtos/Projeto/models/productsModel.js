@@ -2,12 +2,6 @@ var mongoose = require('mongoose');
 
 // SETUP
 var productsSchema = mongoose.Schema({
-	_id: {
-		type: Number,
-		required: true,
-		unique: true,
-		alias: "id",
-	},
 	name: {
 		type: String,
 		required: true,

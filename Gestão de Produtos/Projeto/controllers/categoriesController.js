@@ -92,9 +92,9 @@ exports.update = function (req, res) {
 
 // DELETE CATEGORY
 exports.delete = function (req, res) {
-	if (!ProductsSchema.find({
-		"category": CategoriesSchema.find({ _id: req.params.id_category }).name
-	})) {
+	if (ProductsSchema.find({
+		"category": CategoriesSchema.find({ "_id": req.params.id_category })
+	}) == []) {
 		CategoriesSchema.deleteOne({ _id: req.params.id_category }, function (err, category) {
 			if (err) {
 				res.send(err);
@@ -104,6 +104,9 @@ exports.delete = function (req, res) {
 		});
 	}
 	else {
-		res.status(200).send("Could not delete the category because there are products that depend on it.");
+		//res.status(200).send("Could not delete the category because there are products that depend on it.");
+		res.status(200).json((ProductsSchema.find({
+			"category": CategoriesSchema.find({ "_id": req.params.id_category })
+		})));
 	}
 };
